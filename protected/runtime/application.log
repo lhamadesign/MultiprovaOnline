@@ -1,0 +1,8 @@
+2016/08/08 11:06:58 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "login". in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/yii/provaOnline/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/provaOnline/index.php/login
+---
