@@ -1,8 +1,12 @@
 <?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
+    /* @var $this SiteController */
+    $this->pageTitle=Yii::app()->name;
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/js/loadExam.js', CClientScript::POS_END)
 ?>
+
+<!-- passar as informações da prova aqui-->
+
+
 
 <section id="headInfo" class="col-xs-12">
     <div class="col-xs-6 text-left">

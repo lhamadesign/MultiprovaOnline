@@ -20,12 +20,17 @@
 
 <body>
 
-<div class="container" id="page" col-xs-12 col-lg-10 col-lg-offset-1>
-    <?php echo $content; ?>
-</div><!-- page -->
-<footer class="col-xs-12">
-    <p class="text-center col-lg-4 col-lg-offset-4">Multiprova<br>ECT - UFRN<br>2016</p>
-</footer>
+    <div class="container" id="page" col-xs-12 col-lg-10 col-lg-offset-1>
+        <?php echo $content; ?>
+    </div>
+    
+    <footer class="col-xs-12">
+        <p class="text-center col-lg-4 col-lg-offset-4">Multiprova<br>ECT - UFRN<br>2016</p>
+    </footer>
+
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
+    
     <!-- BOOTSTRAP JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
