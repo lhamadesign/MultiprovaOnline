@@ -4,9 +4,9 @@
 return array(
 	// 'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 	// uncomment the following lines to use a MySQL database
-	'connectionString' =>'mysql:host=teste-multiprova.ufrn.br;dbname=multiprova_teste',
+	'connectionString' =>'mysql:host=localhost;dbname=multiprova_teste',
         'emulatePrepare' => true,
-        'username' => 'multiprova-user',
-        'password' => 'userdb',
+        'username' => 'root',
+        'password' => '',
         'charset' => 'utf8',
 );
