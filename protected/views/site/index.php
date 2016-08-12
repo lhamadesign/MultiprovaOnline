@@ -20,41 +20,11 @@
 </section>
 
 <section id="prova" class="col-xs-12">
-    <div id="enunciado" class="jumbotron">
-        <h1>Enunciado</h1>
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <div class="jumbotron">
+        <img id="enunciado" src="" class="img img-responsive" />
     </div>
     
     <div id="resposta">
-        <div class="panel panel-default">
-            <div class="panel-body">
-              Alternativa
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-body">
-              Alternativa
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-body">
-              Alternativa
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-body">
-              Alternativa
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-body">
-              Alternativa
-            </div>
-        </div>
     </div>
 </section>
 
