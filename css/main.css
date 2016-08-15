@@ -232,3 +232,17 @@ div.search-form
     background-color: white;
     border: solid 1px green;
 }
+
+#resposta > img.alternativa {
+		max-height: 140px;
+		border: solid 4px lightgray;
+		display: block;
+		margin-bottom: 15px;
+}
+
+#resposta > img.alternativa:hover {
+	cursor: pointer;
+	transform: scale(0.98);
+
+	border-color: blue;
+}

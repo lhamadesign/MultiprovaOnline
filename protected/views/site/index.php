@@ -15,7 +15,7 @@
     </div>
     
     <div class="col-xs-6 text-right">
-        <h4>Questão <span id="n_questao">1</span>/<span id="t_questao">9</span></h4>
+        <h4>Questão <span id="n_questao"></span>/<span id="t_questao"></span></h4>
     </div>
 </section>
 
@@ -24,7 +24,14 @@
         <img id="enunciado" src="" class="img img-responsive" />
     </div>
     
-    <div id="resposta">
+    <div id="resposta" class="col-xs-12">
+    </div>
+
+    <div class="col-xs-12">
+        <button class="btn btn-default" type="button" id="avancar">Próxima</button>
     </div>
 </section>
+
+<form id="respostas">
+</form>
 

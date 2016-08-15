@@ -1,6 +1,7 @@
 {"exam":
     {
         "question1":{
+            "numero": 1,
             "url": "/images/provas/prova1/questoes/1/",
             "enunciado": "enunciado.jpg",
             "alternativas": {
@@ -13,6 +14,7 @@
         },
 
         "question2":{
+            "numero": 2,
             "url": "/images/provas/prova1/questoes/2/",
             "enunciado": "enunciado.jpg",
             "alternativas": {
@@ -25,6 +27,7 @@
         },
 
         "question3":{
+            "numero": 3,
             "url": "/images/provas/prova1/questoes/3/",
             "enunciado": "enunciado.jpg",
             "alternativas": {
