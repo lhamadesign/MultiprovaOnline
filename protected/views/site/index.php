@@ -14,28 +14,32 @@
         <h5>Álgebra Linear (CET00430)</h5>
     </div>
     
-    <div class="col-xs-6 text-right">
-        <h4><i>Questão <span id="n_questao"></span> / <span id="t_questao"></span></i></h4>
+    <div id="navigateQuest" class="col-xs-6 text-right">
+        <nav id="questionNav">
+            <h4><i>Questão <span id="n_questao"></span> / <span id="t_questao"></span></i></h4>
+            <ul>
+            </ul>
+        </nav>
     </div>
 </section>
 
 <section id="prova" class="col-xs-12">
     <div class="panel">
-        <div class="panel-header"><h4>Enunciado</h4></div>
+        <div class="panel-header">Enunciado</div>
         <img id="enunciado" src="" class="img img-responsive" />
     </div>
-    
 
-    <h4 id="tipoResposta" class="col-xs-10 col-xs-offset-1 text-center"></h4>
+    <div class="panel">
+        <div id="tipoResposta" class="panel-header">Enunciado</div>
+        <div class="panel-body">
+            <form id="resposta" class="col-xs-12"></form>
+        </div>
+    </div>
     
-    <form id="resposta" class="col-xs-12">
-    </form>
-
-    <div class="col-xs-12">
-        <button class="btn btn-default" type="button" id="avancar">Próxima</button>
+    <div class="text-center">
+        
+            <button class="btn btn-default pull-left" type="button" disabled="disabled" id="voltar">Anterior</button>
+            <button class="btn btn-default pull-right" type="button" id="avancar">Próxima</button>        
     </div>
 </section>
-
-<form id="respostas">
-</form>
 

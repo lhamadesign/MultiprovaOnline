@@ -3,16 +3,15 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #FFF;
+	font: normal 11pt Arial,Helvetica,sans-serif;
+	background: #EEE;
 }
 
 #page
 {
 	margin-top:0px;
 	margin-bottom: 15px;
-	background: white;
-	border: 0px solid #C9E0ED;
+	background: transparent;
 }
 
 #header
@@ -229,32 +228,80 @@ div.search-form
 }
 
 #headInfo {
+	margin-top: 10px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	background-color: #f7f7f6;
+	background-color: transparent;
 	line-height: 0.6em;
-
-	color: #333;
+	/*border-bottom: solid 1px rgba(66,66,66,.6);*/
+	color: #777;
 }
 #headInfo h4, #headInfo h5 {
 	margin: 0px 0px 5px;
 }
 
-#enunciado {
+#prova {
+	background-color: transparent;
+}
+
+#prova .panel {
+	margin-top: 30px;
+	border-radius: 0px;
+	border: none;
+	background-color: #FEFEFE;
+
+	box-shadow: 0px 0px 8px rgba(99,99,99,.3);
+}
+
+#prova .panel .panel-header {
+	width: auto !important;
+	position: relative;
+	left: 30px;
+	top: -8px;
+	padding: 8px 10px;
+	background-color: #5fbab3;
+	display: inline;
+	color: white;
+	font-weight: bold;
+}
+
+#prova button {
+	border: none;
+}
+#prova button:active {
+	border: solid 1px;
+}
+#prova #avancar {
+	color: #5fbab3;
+	transition: all ease-out .3s;
+}
+#prova #avancar:hover {
+	background-color: #5fbab3;
+	color: white;
+
+	transition: all ease .3s;
+}
+
+#prova #avancar:active {
+	border:solid 1px #5fbab3;	
 }
 
 #resposta img.alternativa {
+		margin-top: 15px;
 		max-height: 100px;
 		border: solid 4px lightgray;
 		display: block;
 		margin-bottom: 15px;
+
+		transition: transform linear .3s;
 }
 
 #resposta img.alternativa:hover {
 	cursor: pointer;
-	transform: scale(0.98);
+	transform: scale(1.05);
 
-	border-color: blue;
+	border-color: #5fbab3;
+	transition: transform linear .3s;
 }
 
 #resposta div[id^="questao"] {
@@ -295,6 +342,6 @@ div.search-form
 }
 
 #resposta .form-group input[type=radio]:checked + img.alternativa {
-	border-color:red;
+	border-color:#5fbab3;
     
 }

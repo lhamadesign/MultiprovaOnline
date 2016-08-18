@@ -11,15 +11,30 @@ $(document).ready(function (){
 
     $.get(path + "/js/database.json", function(data, status){
         exam = data.exam;
-        console.log(exam.question1.numero)
-        currentQuestion = 1;
+        
+        currentQuestion = document.createElement("input");
+        currentQuestion.setAttribute("type", "hidden");
+        currentQuestion.value = 1;
+        currentQuestion.id = "currentQuestion";
+        currentQuestion = document.getElementById("resposta").appendChild(currentQuestion);
+        currentQuestion.addEventListener("onchange", function() {
+            if( currentQuestion.value > 1 ) {
+                $("#voltar") 
+                    .prop("disabled", false)
+                    .on("click", prevQuestion);
+            }
+            else {
+                $("#voltar").prop("disabled", "disabled");
+            }
+        }, false);
+
         $("#t_questao").html(Object.keys(exam).length);
         loadQuestion(exam.question1);
     });
 
     function loadQuestion (question) {        
-        currentQuestion = question.numero;
-        $("#n_questao").html(currentQuestion);
+        currentQuestion.value = question.numero;
+        $("#n_questao").html(currentQuestion.value);
         $("#enunciado").attr("src", path + question.url + question.enunciado);
         $("#resposta .questaoAtual").fadeOut().removeClass("questaoAtual");
         var answer = $('<div>', { id: 'questao' + question.numero, class: 'form-group questaoAtual'});
@@ -45,21 +60,16 @@ $(document).ready(function (){
     }
 
     function nextQuestion () {
-        if(currentQuestion >= Object.keys(exam).length) {
+        if(currentQuestion.value >= Object.keys(exam).length) {
             document.write("Prova Finalizada.");
         }
         else {
-            currentQuestion++;
-            loadQuestion (exam["question" + currentQuestion]);
+            currentQuestion.value = parseInt(currentQuestion.value) + 1;            
+            loadQuestion (exam["question" + currentQuestion.value]);
         }
     } 
 
-    function markChoice (choice) {
-        
-    }
-
-    $("#avancar").on("click", nextQuestion);
-    
+    $("#avancar").on("click", nextQuestion); 
 });
 
 
