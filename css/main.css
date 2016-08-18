@@ -9,7 +9,7 @@ body
 
 #page
 {
-	margin-top:15px;
+	margin-top:0px;
 	margin-bottom: 15px;
 	background: white;
 	border: 0px solid #C9E0ED;
@@ -24,7 +24,7 @@ body
 
 #content
 {
-    padding: 20px;
+    padding: 0px 15px;
 }
 
 #sidebar
@@ -228,21 +228,73 @@ div.search-form
 	background: #80CFFF;
 }
 
-#enunciado {
-    background-color: white;
-    border: solid 1px green;
+#headInfo {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background-color: #f7f7f6;
+	line-height: 0.6em;
+
+	color: #333;
+}
+#headInfo h4, #headInfo h5 {
+	margin: 0px 0px 5px;
 }
 
-#resposta > img.alternativa {
-		max-height: 140px;
+#enunciado {
+}
+
+#resposta img.alternativa {
+		max-height: 100px;
 		border: solid 4px lightgray;
 		display: block;
 		margin-bottom: 15px;
 }
 
-#resposta > img.alternativa:hover {
+#resposta img.alternativa:hover {
 	cursor: pointer;
 	transform: scale(0.98);
 
 	border-color: blue;
+}
+
+#resposta div[id^="questao"] {
+	display: none;
+}
+
+#resposta div[id^="questao"].questaoAtual {
+	display: block;
+}
+
+
+
+#resposta input[type=radio] {
+	display: none;
+}
+
+#resposta .form-group img.alternativa {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding: 8px;
+}
+
+#resposta .form-group img.alternativa::before {
+	content: " ";
+	display: inline-block;
+
+	padding: 18px;
+
+	margin-right: 10px;
+	position: absolute;
+
+	left: 0;
+	bottom: 50%;
+	background-color: #aaa;
+
+	border-radius: 8px;
+}
+
+#resposta .form-group input[type=radio]:checked + img.alternativa {
+	border-color:red;
+    
 }
