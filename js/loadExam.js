@@ -4,7 +4,7 @@
  */
 
 $(document).ready(function (){
-    var examId = 1;
+    var examId = parseInt($("input[name='prova[id]']").val());
     var path = window.location;
     var exam;
     var currentQuestion;

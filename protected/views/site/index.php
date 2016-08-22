@@ -1,7 +1,7 @@
 <?php
     /* @var $this SiteController */
     $this->pageTitle=Yii::app()->name;
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/js/loadExam.js', CClientScript::POS_END)
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/js/loadExam.js', CClientScript::POS_END)
 ?>
 
 <!-- passar as informações da prova aqui-->
@@ -30,9 +30,11 @@
     </div>
 
     <div class="panel">
-        <div id="tipoResposta" class="panel-header">Enunciado</div>
+        <div id="tipoResposta" class="panel-header"><i class="text-muted">Resposta...</i></div>
         <div class="panel-body">
-            <form id="resposta" class="col-xs-12"></form>
+            <form id="resposta" class="col-xs-12">
+                <?php echo("<input type='hidden' name='prova[id]' value=" . $id ." />"); ?>
+            </form>
         </div>
     </div>
     
