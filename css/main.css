@@ -4,7 +4,7 @@ body
 	padding: 0;
 	color: #555;
 	font: normal 11pt Arial,Helvetica,sans-serif;
-	background: #EEE;
+	background: #FEFEFE;
 }
 
 #page
@@ -247,10 +247,12 @@ div.search-form
 #prova .panel {
 	margin-top: 30px;
 	border-radius: 0px;
-	border: none;
-	background-color: #FEFEFE;
+	border: 1px solid rgba(200,200,45,.7);
+	background-color: transparent;
 
-	box-shadow: 0px 0px 8px rgba(99,99,99,.3);
+	box-shadow: 
+		0px 0px 4px rgba(200,200,200,.5),
+		inset 0px 0px 8px rgba(200,200,200,.5);
 }
 
 #prova .panel .panel-header {
@@ -343,4 +345,12 @@ div.search-form
 #resposta .form-group input[type=radio]:checked + img.alternativa {
 	border-color:#5fbab3;
     
+}
+
+#resposta textarea {
+	background-color: transparent;
+	border: dotted 2px #EEE;
+	padding: 12px;
+	font-size: 13pt;
+	box-shadow: inset 0px 0px 3px rgba(33,33,33,.3);
 }

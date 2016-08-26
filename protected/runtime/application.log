@@ -161,3 +161,14 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/yii/provaOnline/
 ---
+2016/08/22 14:06:17 [error] [php] Undefined variable: questao (/var/www/yii/provaOnline/protected/controllers/SiteController.php:38)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/yii/provaOnline/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/provaOnline/
+in /var/www/yii/provaOnline/protected/controllers/SiteController.php (38)
+in /var/www/yii/provaOnline/index.php (13)
