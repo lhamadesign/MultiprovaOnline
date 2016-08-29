@@ -234,10 +234,7 @@ div.search-form
 	background-color: transparent;
 	line-height: 0.6em;
 	/*border-bottom: solid 1px rgba(66,66,66,.6);*/
-	color: #777;
-}
-#headInfo h4, #headInfo h5 {
-	margin: 0px 0px 5px;
+	color: #6E623C;
 }
 
 #prova {
@@ -248,19 +245,18 @@ div.search-form
 	margin-top: 30px;
 	border-radius: 0px;
 	border: 1px solid rgba(200,200,45,.7);
-	background-color: transparent;
 
 	box-shadow: 
-		0px 0px 4px rgba(200,200,200,.5),
-		inset 0px 0px 8px rgba(200,200,200,.5);
+		0px 8px 4px rgba(200,200,200,.5),
 }
 
 #prova .panel .panel-header {
 	position: relative;
 	left: 30px;
 	top: -8px;
-	padding: 8px 10px;
-	background-color: #5fbab3;
+	padding: 8px 16px;
+	border-radius: 16px;
+	background-color: rgb(200,200,45);
 	display: inline;
 	color: white;
 	font-weight: bold;
@@ -273,18 +269,23 @@ div.search-form
 	border: solid 1px;
 }
 #prova #avancar {
-	color: #5fbab3;
+	color: #629979;
 	transition: all ease-out .3s;
 }
 #prova #avancar:hover {
-	background-color: #5fbab3;
+	background-color: #629979;
 	color: white;
 
 	transition: all ease .3s;
 }
 
 #prova #avancar:active {
-	border:solid 1px #5fbab3;	
+	border:solid 1px #629979;	
+}
+
+#navQuestao h4 {
+	margin-top: 8px;
+	color: rgb(200,200,45);
 }
 
 #resposta img.alternativa {
@@ -301,7 +302,7 @@ div.search-form
 	cursor: pointer;
 	transform: scale(1.05);
 
-	border-color: #5fbab3;
+	border-color: #629979;
 	transition: transform linear .3s;
 }
 
@@ -343,7 +344,7 @@ div.search-form
 }
 
 #resposta .form-group input[type=radio]:checked + img.alternativa {
-	border-color:#5fbab3;
+	border-color:#629979;
     
 }
 
@@ -353,4 +354,37 @@ div.search-form
 	padding: 12px;
 	font-size: 13pt;
 	box-shadow: inset 0px 0px 3px rgba(33,33,33,.3);
+}
+
+#respostasModal {
+	position: absolute;
+	top: 0px;
+	background-color: #FEFEFE;
+	z-index: 8;
+}
+#respostasModal #respostas {
+	border: none;
+}
+#respostasModal h4 {
+	color: #629979;
+}
+
+#respostas .resposta {
+	font-weight: 700;
+	color: #629979;
+}
+#respostasModal #respostas li {
+	border: none;
+	background-color: transparent;
+}
+#page.blurred section:not(#respostasModal) {
+	filter: blur(1px);
+}
+
+#prova .modalHidden {
+	display: none;
+}
+
+#prova .modalShown {
+	display: block;
 }

@@ -9,16 +9,13 @@
 
 
 <section id="headInfo" class="col-xs-12">
-    <div class="col-xs-6 text-left">
-        <h4>Avaliação I</h4>
-        <h5>Álgebra Linear (CET00430)</h5>
+    <div class="col-xs-12 text-center">
+        <h5>Avaliação I - Álgebra Linear (CET00430)</h5>
     </div>
     
-    <div id="navigateQuest" class="col-xs-6 text-right">
-        <nav id="questionNav">
+    <div class="col-xs-12 text-center">
+        <nav id="NavQuestao">
             <h4><i>Questão <span id="n_questao"></span> / <span id="t_questao"></span></i></h4>
-            <ul>
-            </ul>
         </nav>
     </div>
 </section>
@@ -42,7 +39,9 @@
             <button class="btn btn-default pull-right" type="button" id="avancar">Próxima</button>        
     </div>
 
-    <div style="display: none;" id="respostas" class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
-        
-    </div>
+    <div id="respostasModal" class="modalHidden col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 panel">
+        <h4 class="text-center">Respostas</h4>
+        <ul id="respostas" class="list-group">
+        </ul>        
+    </div>    
 </section>

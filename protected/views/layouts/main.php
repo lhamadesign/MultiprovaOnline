@@ -20,7 +20,7 @@
 
 <body>
 
-    <div class="container" id="page" col-xs-12 col-lg-10 col-lg-offset-1>
+    <div class="container" id="page" class="col-xs-12 col-lg-10 col-lg-offset-1">
         <?php echo $content; ?>
     </div>
     

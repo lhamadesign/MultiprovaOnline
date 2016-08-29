@@ -61,19 +61,19 @@ $(document).ready(function (){
     }
 
     function saveQuestion(number) {
-        var save = $("<div>", { class: "well well-sm"});
-        $(save).html("<h3>Questão " + number + "</h3>");
+        var save = $("<li>", { class: "list-group-item"});
+        $(save).html("<h5>Questão " + number + "</h5>");
         var text = ("question" + number);
         if(exam[text].objetiva) {
-            $(save).append("<p>" + (document.querySelector("input[name='prova(" + number + ")']:checked")).value + ") </p>");
+            $(save).append("<p class='resposta'>" + (document.querySelector("input[name='prova(" + number + ")']:checked")).value + ") </p>");
         } else {
-            $(save).append("<p>" + document.querySelector("[name='prova(" + number + ")']").value + "</p>");
+            $(save).append("<p class='resposta'>" + document.querySelector("[name='prova(" + number + ")']").value + "</p>");
         }
         $("#respostas").append(save);
     }
 
     function finalizarProva () {
-       $("#respostas").fadeIn();
+       $("#respostasModal").fadeIn();
     }
 
     function nextQuestion () {
