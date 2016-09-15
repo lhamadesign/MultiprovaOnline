@@ -40,6 +40,7 @@ $(document).ready(function (){
         $("#resposta .questaoAtual").fadeOut().removeClass("questaoAtual");
         var answer = $('<div>', { id: 'questao' + question.numero, class: 'form-group questaoAtual'});
         $("#resposta").append(answer);
+        $("#avancar").prop("disabled", true);
 
         if(question.objetiva == true) {
             // RESPOSTA ALTERNATIVA
@@ -47,6 +48,7 @@ $(document).ready(function (){
             $.each(question.alternativas, function (key, value) {
                 var label = $('<label>', {class: 'col-xs-4 col-lg-4'});
                 var input = $('<input>', {type: 'radio', name: 'prova(' + question.numero + ')', value: key});
+                $(input).on("change", isAnswered);
                 $(label).append(input);
                 var image = $('<img>', {class: 'alternativa', src : (path + question.url + value), dataKey: key});
                 $(label).append(image);
@@ -56,7 +58,27 @@ $(document).ready(function (){
             // RESPOSTA ESCRITA (PESSOAL)
             $("#tipoResposta").html('<strong>Discursiva</strong> (Elabore sua resposta pessoal)');
             var answerField = $('<textarea>', {class: 'col-xs-12', rows: 4, name: 'prova(' + question.numero + ')'});
+            $(answerField).on("input", isAnswered);
             $("#questao" + question.numero).append(answerField);
+        }
+    }
+    
+    function isAnswered( event ) {
+        var input = event.target || event.srcElement;
+        var isObjetiva = exam["question" + (currentQuestion.value)].objetiva;
+        if(isObjetiva == true) {
+            if(input.checked) {
+                $("#avancar").prop("disabled", false);
+            } else {
+                $("#avancar").prop("disabled", true);
+            }
+        }
+        else {
+            if(input.value == '') {
+                $("#avancar").prop("disabled", true);
+            } else {
+                $("#avancar").prop("disabled", false);
+            }
         }
     }
 
